@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { format } from 'date-fns';
+import moment from 'moment';
+import 'moment-timezone';
+
 import './Clock.css';
 
 // The only stateful component. My brain argued that it's much more expensive to do "polling" in redux.
@@ -9,20 +11,25 @@ import './Clock.css';
 export default class Clock extends PureComponent {
   static propTypes = {
     color: PropTypes.string,
+    zone: PropTypes.string,
   };
 
   static defaultProps = {
     color: 'black',
+    zone: '',
   };
 
-  state = {
-    time: format(new Date(), 'hh:mm:ss A'),
-  };
+  constructor(props) {
+    super(props);
 
-  timeout;
+    this.timeout = undefined;
+    this.state = {
+      time: this.getCurrentTime(),
+    };
+  }
 
   componentDidMount() {
-    this.getCurrentTime();
+    this.pollCurrentTime();
   }
 
   componentWillUnmount() {
@@ -30,13 +37,24 @@ export default class Clock extends PureComponent {
   }
 
   getCurrentTime = () => {
+    const now = moment(Date.now());
+
+    // Immutable lol
+    if (this.props.zone !== '') {
+      now.tz(this.props.zone);
+    }
+
+    return now.format('hh:mm:ss A');
+  };
+
+  pollCurrentTime = () => {
     this.timeout = setTimeout(
       () =>
         this.setState(
           {
-            time: format(new Date(), 'hh:mm:ss A'),
+            time: this.getCurrentTime(),
           },
-          () => this.getCurrentTime()
+          () => this.pollCurrentTime()
         ),
       1000
     );

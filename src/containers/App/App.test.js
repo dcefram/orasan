@@ -5,6 +5,7 @@ import { mount } from 'enzyme';
 import { App } from './App';
 import Clock from 'components/Clock/Clock';
 import ColorPicker from 'components/ColorPicker/ColorPicker';
+import TimeZone from 'components/TimeZone/TimeZone';
 
 /**
  * Just a note for myself about testing...(https://medium.freecodecamp.org/the-right-way-to-test-react-components-548a4736ab22)
@@ -42,5 +43,10 @@ describe('App', () => {
   it('App should always mount the ColorPicker', () => {
     const pickers = clock().find(ColorPicker);
     expect(pickers.length).toBeGreaterThan(0);
+  });
+
+  it('App should always mount the TimeZone', () => {
+    const zones = clock().find(TimeZone);
+    expect(zones.length).toBeGreaterThan(0);
   });
 });

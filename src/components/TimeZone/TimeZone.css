@@ -1,0 +1,8 @@
+.ors-timezone {
+  text-align: center;
+}
+
+.ors-timezone .ors-timezone__container {
+  width: 20em;
+  margin: 1em auto;
+}

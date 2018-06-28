@@ -5,9 +5,11 @@ import PropTypes from 'prop-types';
 // Components
 import Clock from 'components/Clock/Clock';
 import ColorPicker from 'components/ColorPicker/ColorPicker';
+import TimeZone from 'components/TimeZone/TimeZone';
 
 // Redux stuff
 import { setColor } from 'redux/modules/colors';
+import { setTimezone } from 'redux/modules/timezone';
 
 // Stylesheets
 import './App.css';
@@ -23,6 +25,8 @@ export class App extends Component {
 
   onColorChange = event => this.props.onColorChange(event.target.dataset.color);
 
+  onTimezoneChange = event => this.props.onTimezoneChange(event.target.value);
+
   render() {
     return (
       <div className="slds-box ors-app">
@@ -36,10 +40,14 @@ export class App extends Component {
           </div>
         </header>
 
-        <Clock color={this.props.color} />
+        <Clock color={this.props.color} zone={this.props.timezone} />
 
         <div className="slds-box">
           <ColorPicker color={this.props.color} onChange={this.onColorChange} />
+          <TimeZone
+            value={this.props.timezone}
+            onChange={this.onTimezoneChange}
+          />
         </div>
       </div>
     );
@@ -48,10 +56,12 @@ export class App extends Component {
 
 const state = state => ({
   color: state.colors.color,
+  timezone: state.timezone.zone,
 });
 
 const actions = dispatch => ({
   onColorChange: color => dispatch(setColor(color)),
+  onTimezoneChange: zone => dispatch(setTimezone(zone)),
 });
 
 export default connect(
