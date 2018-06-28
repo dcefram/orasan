@@ -12,6 +12,7 @@ import registerServiceWorker from 'helpers/registerServiceWorker';
 
 // Styles
 import 'theme/default.css';
+import 'theme/salesforce/styles/salesforce-lightning-design-system.min.css';
 
 ReactDOM.render(<App store={store} />, document.getElementById('root'));
 registerServiceWorker();

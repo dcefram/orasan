@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { format } from 'date-fns';
+import './Clock.css';
 
 // The only stateful component. My brain argued that it's much more expensive to do "polling" in redux.
 // And that it didn't make much sense to do polling outside the Clock component (ie. in the parent)
@@ -46,6 +47,12 @@ export default class Clock extends PureComponent {
       color: this.props.color,
     };
 
-    return <h1 style={styles}>{this.state.time}</h1>;
+    return (
+      <div className="ors-clock">
+        <h1 className="ors-clock__text" style={styles}>
+          {this.state.time}
+        </h1>
+      </div>
+    );
   }
 }

@@ -25,12 +25,20 @@ export class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1>Current Time</h1>
-          <Clock color={this.props.color} />
+      <div className="slds-box ors-app">
+        <header className="slds-page-header">
+          <div className="slds-media">
+            <div className="slds-media__body">
+              <h1 className="slds-page-header__title slds-truncate slds-align-middle">
+                Current Time
+              </h1>
+            </div>
+          </div>
         </header>
-        <div className="App-intro">
+
+        <Clock color={this.props.color} />
+
+        <div className="slds-box">
           <ColorPicker color={this.props.color} onChange={this.onColorChange} />
         </div>
       </div>

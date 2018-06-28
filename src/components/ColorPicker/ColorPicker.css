@@ -1,19 +1,28 @@
-.active {
+.ors-colorpicker {
+  text-align: center;
+}
+
+.ors-colorpicker .ors-colorpicker__label {
   font-weight: bold;
 }
 
-.black {
+.ors-colorpicker .ors-colorpicker__active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.ors-colorpicker .ors-colorpicker__black {
   color: black;
 }
 
-.red {
+.ors-colorpicker .ors-colorpicker__red {
   color: red;
 }
 
-.blue {
+.ors-colorpicker .ors-colorpicker__blue {
   color: blue;
 }
 
-.green {
+.ors-colorpicker .ors-colorpicker__green {
   color: green;
 }

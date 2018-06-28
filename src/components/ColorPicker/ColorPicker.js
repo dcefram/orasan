@@ -11,12 +11,20 @@ const ColorPicker = ({
   colors = ['black', 'red', 'blue', 'green'],
   color = 'black',
 }) => (
-  <div>
-    <label>Display color:</label>
+  <div className="ors-colorpicker">
+    <label className="ors-colorpicker__label slds-p-right_medium">
+      Display color:
+    </label>
     {colors.map((value, index) => (
       <a
         key={`${value}-${index}`}
-        className={cx(value, { active: value === color })}
+        className={cx(
+          'slds-text-link slds-p-horizontal_medium',
+          `ors-colorpicker__${value}`,
+          {
+            'ors-colorpicker__active': value === color,
+          }
+        )}
         data-color={value}
         onClick={onChange}
       >

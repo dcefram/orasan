@@ -1,0 +1,11 @@
+.ors-clock {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ors-clock__text {
+  font-size: 10em;
+  text-align: center;
+}
