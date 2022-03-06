@@ -12,6 +12,10 @@
 		43004DD027D44B1B009815CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43004DCF27D44B1B009815CE /* Assets.xcassets */; };
 		43004DD327D44B1B009815CE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43004DD227D44B1B009815CE /* Preview Assets.xcassets */; };
 		43004DDB27D44C49009815CE /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43004DDA27D44C49009815CE /* ClockView.swift */; };
+		43004DE127D48874009815CE /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43004DE027D48874009815CE /* StatusBarController.swift */; };
+		43004DE627D48B25009815CE /* clock-96.png in Resources */ = {isa = PBXBuildFile; fileRef = 43004DE327D48B25009815CE /* clock-96.png */; };
+		43004DE727D48B25009815CE /* clock-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 43004DE427D48B25009815CE /* clock-24.png */; };
+		43004DE827D48B25009815CE /* clock-48.png in Resources */ = {isa = PBXBuildFile; fileRef = 43004DE527D48B25009815CE /* clock-48.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		43004DD227D44B1B009815CE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		43004DD427D44B1B009815CE /* orasan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = orasan.entitlements; sourceTree = "<group>"; };
 		43004DDA27D44C49009815CE /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
+		43004DE027D48874009815CE /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
+		43004DE327D48B25009815CE /* clock-96.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-96.png"; sourceTree = "<group>"; };
+		43004DE427D48B25009815CE /* clock-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-24.png"; sourceTree = "<group>"; };
+		43004DE527D48B25009815CE /* clock-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-48.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,8 @@
 		43004DCA27D44B1A009815CE /* orasan */ = {
 			isa = PBXGroup;
 			children = (
+				43004DE227D48B15009815CE /* assets */,
+				43004DDF27D4883E009815CE /* helpers */,
 				43004DCB27D44B1A009815CE /* orasanApp.swift */,
 				43004DDE27D47ADA009815CE /* views */,
 				43004DCF27D44B1B009815CE /* Assets.xcassets */,
@@ -78,6 +88,24 @@
 				43004DDA27D44C49009815CE /* ClockView.swift */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		43004DDF27D4883E009815CE /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				43004DE027D48874009815CE /* StatusBarController.swift */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
+		43004DE227D48B15009815CE /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				43004DE427D48B25009815CE /* clock-24.png */,
+				43004DE527D48B25009815CE /* clock-48.png */,
+				43004DE327D48B25009815CE /* clock-96.png */,
+			);
+			path = assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +166,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43004DE627D48B25009815CE /* clock-96.png in Resources */,
 				43004DD327D44B1B009815CE /* Preview Assets.xcassets in Resources */,
+				43004DE727D48B25009815CE /* clock-24.png in Resources */,
+				43004DE827D48B25009815CE /* clock-48.png in Resources */,
 				43004DD027D44B1B009815CE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43004DCE27D44B1A009815CE /* ContentView.swift in Sources */,
+				43004DE127D48874009815CE /* StatusBarController.swift in Sources */,
 				43004DDB27D44C49009815CE /* ClockView.swift in Sources */,
 				43004DCC27D44B1A009815CE /* orasanApp.swift in Sources */,
 			);
