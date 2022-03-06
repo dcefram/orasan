@@ -11,6 +11,7 @@
 		43004DCE27D44B1A009815CE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43004DCD27D44B1A009815CE /* ContentView.swift */; };
 		43004DD027D44B1B009815CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43004DCF27D44B1B009815CE /* Assets.xcassets */; };
 		43004DD327D44B1B009815CE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43004DD227D44B1B009815CE /* Preview Assets.xcassets */; };
+		43004DDB27D44C49009815CE /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43004DDA27D44C49009815CE /* ClockView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		43004DCF27D44B1B009815CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43004DD227D44B1B009815CE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		43004DD427D44B1B009815CE /* orasan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = orasan.entitlements; sourceTree = "<group>"; };
+		43004DDA27D44C49009815CE /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				43004DCB27D44B1A009815CE /* orasanApp.swift */,
-				43004DCD27D44B1A009815CE /* ContentView.swift */,
+				43004DDE27D47ADA009815CE /* views */,
 				43004DCF27D44B1B009815CE /* Assets.xcassets */,
 				43004DD427D44B1B009815CE /* orasan.entitlements */,
 				43004DD127D44B1B009815CE /* Preview Content */,
@@ -67,6 +69,15 @@
 				43004DD227D44B1B009815CE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		43004DDE27D47ADA009815CE /* views */ = {
+			isa = PBXGroup;
+			children = (
+				43004DCD27D44B1A009815CE /* ContentView.swift */,
+				43004DDA27D44C49009815CE /* ClockView.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43004DCE27D44B1A009815CE /* ContentView.swift in Sources */,
+				43004DDB27D44C49009815CE /* ClockView.swift in Sources */,
 				43004DCC27D44B1A009815CE /* orasanApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
