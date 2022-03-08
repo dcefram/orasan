@@ -16,6 +16,8 @@
 		43004DE627D48B25009815CE /* clock-96.png in Resources */ = {isa = PBXBuildFile; fileRef = 43004DE327D48B25009815CE /* clock-96.png */; };
 		43004DE727D48B25009815CE /* clock-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 43004DE427D48B25009815CE /* clock-24.png */; };
 		43004DE827D48B25009815CE /* clock-48.png in Resources */ = {isa = PBXBuildFile; fileRef = 43004DE527D48B25009815CE /* clock-48.png */; };
+		439116D727D4FC4900AF35F2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439116D627D4FC4900AF35F2 /* MainViewController.swift */; };
+		439116D927D50B8C00AF35F2 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439116D827D50B8C00AF35F2 /* ControlView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		43004DE327D48B25009815CE /* clock-96.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-96.png"; sourceTree = "<group>"; };
 		43004DE427D48B25009815CE /* clock-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-24.png"; sourceTree = "<group>"; };
 		43004DE527D48B25009815CE /* clock-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-48.png"; sourceTree = "<group>"; };
+		439116D627D4FC4900AF35F2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		439116D827D50B8C00AF35F2 /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,12 +66,12 @@
 		43004DCA27D44B1A009815CE /* orasan */ = {
 			isa = PBXGroup;
 			children = (
-				43004DE227D48B15009815CE /* assets */,
-				43004DDF27D4883E009815CE /* helpers */,
 				43004DCB27D44B1A009815CE /* orasanApp.swift */,
-				43004DDE27D47ADA009815CE /* views */,
 				43004DCF27D44B1B009815CE /* Assets.xcassets */,
 				43004DD427D44B1B009815CE /* orasan.entitlements */,
+				43004DE227D48B15009815CE /* assets */,
+				43004DDF27D4883E009815CE /* helpers */,
+				43004DDE27D47ADA009815CE /* views */,
 				43004DD127D44B1B009815CE /* Preview Content */,
 			);
 			path = orasan;
@@ -86,6 +90,7 @@
 			children = (
 				43004DCD27D44B1A009815CE /* ContentView.swift */,
 				43004DDA27D44C49009815CE /* ClockView.swift */,
+				439116D827D50B8C00AF35F2 /* ControlView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -93,6 +98,7 @@
 		43004DDF27D4883E009815CE /* helpers */ = {
 			isa = PBXGroup;
 			children = (
+				439116D627D4FC4900AF35F2 /* MainViewController.swift */,
 				43004DE027D48874009815CE /* StatusBarController.swift */,
 			);
 			path = helpers;
@@ -185,6 +191,8 @@
 				43004DE127D48874009815CE /* StatusBarController.swift in Sources */,
 				43004DDB27D44C49009815CE /* ClockView.swift in Sources */,
 				43004DCC27D44B1A009815CE /* orasanApp.swift in Sources */,
+				439116D927D50B8C00AF35F2 /* ControlView.swift in Sources */,
+				439116D727D4FC4900AF35F2 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
